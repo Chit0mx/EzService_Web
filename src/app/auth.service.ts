@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 
-import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireAuth } from '@angular/fire/auth';
 
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { Router } from '@angular/router';
+
 
 @Injectable()
 export class AuthService {
@@ -15,6 +16,7 @@ export class AuthService {
     this.isLogged();
   }
 
+  /*
   public signup = (email, password, name, lastname) => {
     this.angularFireAuth.auth
       .createUserWithEmailAndPassword(email, password)
@@ -32,9 +34,10 @@ export class AuthService {
         console.log(error);
       });
   };
+  */
 
   public login = (email, password) => {
-    this.angularFireAuth.auth
+    this.angularFireAuth
       .signInWithEmailAndPassword(email, password)
       .then((response) => {
         console.log(response);
@@ -47,10 +50,16 @@ export class AuthService {
   };
 
   public isLogged() {
-    return this.angularFireAuth.authState;
+    return this.angularFireAuth.authState;  
   }
 
   public logout() {
-    this.angularFireAuth.auth.signOut();
+    this.angularFireAuth.signOut().then(() => {
+      this.router.navigate(['login']);
+      console.log('Logout');
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }
 }
