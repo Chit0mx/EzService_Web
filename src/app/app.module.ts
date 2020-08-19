@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule, MatButton } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule, MatTable } from '@angular/material/table';
 
 // Firebase Modules
 import { AngularFireModule } from '@angular/fire';
@@ -39,6 +40,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { ShortCutCardComponent } from './components/short-cut-card/short-cut-card.component';
 
 import { UsersCrudViewComponent } from './components/users-crud-view/users-crud-view.component';
+import { RegistroServidorComponent } from './components/registro-servidor/registro-servidor.component';
+import { CrudTableComponent } from './components/users-crud-table/crud-table.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,9 @@ import { UsersCrudViewComponent } from './components/users-crud-view/users-crud-
     AdminPanelComponent,
     ShortCutCardComponent,
     SigninComponent,
-    UsersCrudViewComponent
+    UsersCrudViewComponent,
+    RegistroServidorComponent,
+    CrudTableComponent
   ],
 
   imports: [
@@ -79,6 +84,7 @@ import { UsersCrudViewComponent } from './components/users-crud-view/users-crud-
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
+    MatTableModule,
 
     //PWA Modules
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -96,6 +102,7 @@ import { UsersCrudViewComponent } from './components/users-crud-view/users-crud-
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
+    MatTableModule,
   ],
 })
 export class AppModule { }

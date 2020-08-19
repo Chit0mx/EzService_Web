@@ -1,25 +1,39 @@
-
 .backCard {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
   max-width: 75%;
   height: auto;
-  min-height: 70%;
-  margin: 40px auto 0px;
+  min-height: 75vh;
+  max-height: 0cm;
+
+  margin: 30px auto 0px;
   padding: 45px;
-  padding-top: 60px;
+  padding-top: 25px;
   padding-bottom: 60px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 15px;
 }
 
-.cancel{
+.cancel {
   position: absolute;
   top: -15px;
   margin-left: 48%;
   background-color: tomato;
-  width: ;
   padding: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .cancel {
+    margin-left: 30%;
+  }
+
+  .backCard{
+    margin-left: 1px;
+    margin-right: 1px;
+    max-width: unset;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }

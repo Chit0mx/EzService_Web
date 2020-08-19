@@ -1,7 +1,7 @@
-<app-back-ground bgStyle = 'panelBackground'></app-back-ground>
-<app-tool-bar></app-tool-bar>   
+ 
 <div class="backCard">
-    <button mat-raised-button onClick="window.open('../adminPanel', '_self')" class="cancel">
-        <mat-icon matSuffix>dashboard</mat-icon>
+    <button mat-raised-button (click)="onClick()" class="cancel">
+        <mat-icon matSuffix>cancel</mat-icon>
       </button>
+      <app-crud-table></app-crud-table>
 </div>

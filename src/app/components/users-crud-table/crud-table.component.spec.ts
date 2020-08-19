@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginFormComponent } from './login-form.component';
+import { CrudTableComponent } from './crud-table.component';
 
-describe('LoginFormComponent', () => {
-  let component: LoginFormComponent;
-  let fixture: ComponentFixture<LoginFormComponent>;
+describe('CrudTableComponent', () => {
+  let component: CrudTableComponent;
+  let fixture: ComponentFixture<CrudTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LoginFormComponent]
+      declarations: [ CrudTableComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginFormComponent);
+    fixture = TestBed.createComponent(CrudTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
