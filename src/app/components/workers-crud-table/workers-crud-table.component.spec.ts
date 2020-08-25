@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UsersCrudViewComponent } from './users-crud-view.component';
+import { WorkersCrudTableComponent } from './workers-crud-table.component';
 
-describe('UsersCrudViewComponent', () => {
-  let component: UsersCrudViewComponent;
-  let fixture: ComponentFixture<UsersCrudViewComponent>;
+describe('WorkersCrudTableComponent', () => {
+  let component: WorkersCrudTableComponent;
+  let fixture: ComponentFixture<WorkersCrudTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UsersCrudViewComponent ]
+      declarations: [ WorkersCrudTableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UsersCrudViewComponent);
+    fixture = TestBed.createComponent(WorkersCrudTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

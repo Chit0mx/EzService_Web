@@ -18,6 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule, MatTable } from '@angular/material/table';
 
+
 // Firebase Modules
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -27,7 +28,6 @@ import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 
 //Services
 import { AuthService } from './auth.service';
-import { SigninComponent } from './components/signin/signin.component';
 
 //Components
 import { Page404Component } from './components/page404/page404.component';
@@ -39,9 +39,10 @@ import { BackGroundComponent } from './components/back-ground/back-ground.compon
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ShortCutCardComponent } from './components/short-cut-card/short-cut-card.component';
 
-import { UsersCrudViewComponent } from './components/users-crud-view/users-crud-view.component';
+import { CrudViewComponent } from './components/crud-view/users-crud-view.component';
 import { RegistroServidorComponent } from './components/registro-servidor/registro-servidor.component';
-import { CrudTableComponent } from './components/users-crud-table/crud-table.component';
+import { UsersTableComponent } from './components/users-crud-table/crud-table.component';
+import { WorkersCrudTableComponent } from './components/workers-crud-table/workers-crud-table.component';
 
 @NgModule({
   declarations: [
@@ -54,10 +55,10 @@ import { CrudTableComponent } from './components/users-crud-table/crud-table.com
     ToolBarComponent,
     AdminPanelComponent,
     ShortCutCardComponent,
-    SigninComponent,
-    UsersCrudViewComponent,
+    CrudViewComponent,
     RegistroServidorComponent,
-    CrudTableComponent
+    UsersTableComponent,
+    WorkersCrudTableComponent
   ],
 
   imports: [
